@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唐嘉玲 - 个人作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="logo">Alyssa个人网站</a>
+            <div class="nav-links">
+                <a href="#about">关于我</a>
+                <a href="#skills">专业优势</a>
+                <a href="#education">教育经历</a>
+                <a href="#experience">工作经历</a>
+                <a href="#contact">联系</a>
+                <a href="projects.html">项目集</a>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <span class="theme-icon">☀️</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="greeting">你好，我是</p>
+                <h1>唐嘉玲</h1>
+                <p class="title">售前解决方案经理 / 项目经理</p>
+                <div class="certifications">
+                    <span class="cert-tag">📜 PMP项目管理认证</span>
+                    <span class="cert-tag">📜 NPDP产品经理认证</span>
+                </div>
+                <p class="description">拥有12年产品项目管理与售前解决方案经验，擅长AI工具赋能、项目全生命周期管理及定制化解决方案输出。</p>
+                <a href="projects.html" class="btn">查看项目</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="tjl.jpg" alt="唐嘉玲">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我</h2>
+            <div class="about-content">
+                <p>我是一名拥有12年丰富经验的售前解决方案经理和产品经理，目前在深圳市智慧空间平台技术开发有限公司任职。我具备完整的项目全生命周期管理思维，擅长AI工具赋能、售前项目沟通对接及定制化解决方案输出。</p>
+                <p>在工作中，我注重细节，善于沟通，能够与开发团队紧密协作，将设计理念完美落地。我热爱学习新技术，不断提升自己的专业能力，致力于为客户提供最优质的解决方案。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">专业优势</h2>
+            <div class="skills-grid">
+                <div class="skill-card" onclick="openModal('ai-coding')">
+                    <span class="skill-icon">🤖</span>
+                    <h3>AI编程</h3>
+                    <p>熟练掌握大模型辅助编程，具备自然语言转代码能力</p>
+                    <span class="skill-hint">点击查看详情</span>
+                </div>
+                <div class="skill-card" onclick="openModal('ai-tools')">
+                    <span class="skill-icon">🛠️</span>
+                    <h3>AI工具赋能</h3>
+                    <p>熟悉主流AI工具生态，擅长利用AI提升工作效率</p>
+                    <span class="skill-hint">点击查看详情</span>
+                </div>
+                <div class="skill-card" onclick="openModal('solutions')">
+                    <span class="skill-icon">💡</span>
+                    <h3>解决方案输出</h3>
+                    <p>精准识别客户痛点，输出定制化解决方案</p>
+                    <span class="skill-hint">点击查看详情</span>
+                </div>
+                <div class="skill-card" onclick="openModal('project-mgmt')">
+                    <span class="skill-icon">📊</span>
+                    <h3>项目管理</h3>
+                    <p>全生命周期管理，进度成本风险管控</p>
+                    <span class="skill-hint">点击查看详情</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icon" id="modalIcon"></span>
+                <h3 id="modalTitle"></h3>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">教育经历</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <div class="education-info">
+                        <h3>福州大学</h3>
+                        <p class="education-degree">硕士 · 情报学</p>
+                        <p class="education-date">2011 - 2014</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">🎓</div>
+                    <div class="education-info">
+                        <h3>防灾科技学院</h3>
+                        <p class="education-degree">本科 · 会计学</p>
+                        <p class="education-date">2007 - 2011</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">工作经历</h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>深圳市智慧空间平台技术开发有限公司</h3>
+                        <p class="job-title">售前解决方案经理</p>
+                        <p class="job-date">2022.11 - 至今</p>
+
+                        <div class="job-section">
+                            <h4>一、售前项目沟通对接及解决方案输出：</h4>
+                            <ul>
+                                <li>项目前期需求调研及实地勘察，识别客户痛点和技术需求分析；</li>
+                                <li>与客户进行多轮需求沟通，涵盖智慧园区规划、建设、招商、运营全生命周期的业务范围，针对不同类型客户不同场景编制包含架构、功能、实施计划、预算的定制解决方案；</li>
+                                <li>组织方案演示与技术答疑，与客户决策层、业务层、技术层分别沟通，挖掘智慧园区智能安防、能源管理、智慧办公、园区运营（招商、物业、应急指挥）等全模块潜在需求；结合公司成功案例进行专业解答，配合销售团队完成项目商务洽谈推进；</li>
+                                <li>智慧园区软件系统演示、详细讲解介绍，结合客户业务痛点，提供可落地的场景化应用演示，强化方案价值呈现；</li>
+                                <li>围绕公司核心业务编制标准方案及产城空间场景类方案。</li>
+                            </ul>
+                        </div>
+
+                        <div class="job-section">
+                            <h4>二、投标项目支持：</h4>
+                            <ul>
+                                <li>配合投标团队完成投标资料（方案、技术参数、资质等）的梳理与核对，确保符合招标要求；</li>
+                                <li>负责投标文件技术部分（技术方案、实施计划、售后等）的编制与审核，突出技术优势；</li>
+                                <li>参与部分项目的投标答辩，解答评委技术疑问，阐述方案可行性与性价比。</li>
+                            </ul>
+                        </div>
+
+                        <div class="job-section">
+                            <h4>三、软件项目管理及实施：</h4>
+                            <ul>
+                                <li>负责部分智慧园区软件项目计划管理，协调研发、测试、运维及客户资源，把控进度、预警风险；</li>
+                                <li>负责协调现场部署、系统调试、数据迁移、人员培训等实施工作，确保系统满足客户需求；</li>
+                                <li>收集客户反馈，处理问题，组织验收并归档项目资料。</li>
+                            </ul>
+                        </div>
+
+                        <div class="job-section">
+                            <h4>四、市场分析及竞争对手调研：</h4>
+                            <ul>
+                                <li>定期开展智慧园区行业趋势、政策、技术、竞品等调研，分析市场机遇与挑战；</li>
+                                <li>调研竞品公司产品功能、服务、价格等需求变化，为方案优化和产品迭代提供依据；</li>
+                                <li>跟踪行业标杆项目，分析技术应用、实施模式和运营效果，总结可借鉴经验。</li>
+                            </ul>
+                        </div>
+
+                        <div class="job-section highlight">
+                            <h4>主要业绩：</h4>
+                            <ul>
+                                <li>完成与四十余家重点客户深入需求沟通，准确把握其在智慧园区全生命周期的业务痛点与期望。针对不同客户类型和场景，编制五十余份定制解决方案；</li>
+                                <li>完成标准类方案编制：服务类（智慧园区顾问咨询、智能化工程设计）；标准软件产品类（物业运营软件、招商租赁软件、设施运维软件）；定制软件产品类（智慧运营中心、IOC）；场景类方案编制（智慧医院、智慧校园、智慧养老、智慧酒店、智慧社区等）；</li>
+                                <li>亮点：配合推进八个重点项目落地，其中广州科技金融集团从顾问咨询到后续科金智慧园区全套系统（招商、资管、物业运营、产业运营、IOC）合同签订，完成广州国企智慧园区项目的全产品线建设服务；</li>
+                                <li>支持投标项目20余个，投标资料准备及时率100%，技术文件编制准确率95%，助力中标项目6个；</li>
+                                <li>亮点：在粤海置地粤商务的投标项目中，凭借述标、技术应答的差异化优势中标；</li>
+                                <li>负责软件项目4个，智慧园区顾问咨询项目1个，项目交付率100%，系统部署成功率98%，客户验收通过率100%；</li>
+                                <li>亮点：一个软件项目述标、项目管理、产品规划、项目交付的全周期管理，并完成维保续签；保证所负责的软件项目的交付质量及后期运维。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>深圳市智工服务有限公司</h3>
+                        <p class="job-title">产品经理</p>
+                        <p class="job-date">2021.05 - 2022.11</p>
+                        <ul>
+                            <li>负责政府OA系统、督察督办系统、智慧教培模块、困难帮扶系统产品规划、产品管理；</li>
+                            <li>OA系统（PC和移动端）：梳理内部需求，根据需求优先级规划周迭代版本，包含：收发文管理、请休假及日常事物管理等日程办公模块；移动端OA以H5方式集成进粤政易APP中；</li>
+                            <li>督查督办系统：拜访及调研发改委督查系统，调研工会内部督察流程，从0-1衍生督查督办产品，跟进使用情况并持续迭代；</li>
+                            <li>教培系统：设计职工教培系统的前端及后端产品，梳理干部、会员和职工三类人群的培训诉求，搭建教培线上学习、线下培训的学习全流程及评价系统；</li>
+                            <li>困难帮扶系统：梳理深圳市申请贫困救助的申请及审核流程，为市职工设计小程序及PC的申请入口，及各级工会审核的快速提醒及便捷审批系统；</li>
+                            <li>项目管理、需求管理及产品培训：对接各需求部室，梳理及规划需求，对负责的产品进行定期汇报及产品上线后的各类培训；</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>平安科技（深圳）有限公司</h3>
+                        <p class="job-title">资深产品经理</p>
+                        <p class="job-date">2018.07 - 2021.04</p>
+                        <ul>
+                            <li>海内外OCR产品设计、产品规划和产品管理；</li>
+                            <li>负责香港身份证识别鉴伪Ekyc项目，前端SDK，后端API整套产品架构的搭建，产品设计及管理工作；Ekyc主要包含：身份证真假判断、身份证信息识别、活体检测及人脸比对一系列线上客户注册/开户流程，主要产品一提供至以下业务方：香港交银国际、香港壹账通虚拟银行、永隆银行、陆国际、华侨永亨银行，对接集成，通过香港金管局的监管，并集成上线；</li>
+                            <li>负责东南亚ocr产品及海外节点的部署搭建，覆盖马来身份证鉴伪识别、泰国身份证鉴伪、印尼身份证识别，形成整体的身份证采集、身份证识别+活体检测、人脸识别的整套Ekyc方案；</li>
+                            <li>负责国内ocr产品的设计、管理及产品矩阵搭建；ocr产品包括：国内二代身份证识别、银行卡识别、手写体识别、银行票据识别等；</li>
+                            <li>AI数据运营监控系统的产品设计和规划；对接大数据平台，对线上数据进行整合，规整日志，（1）统计调用行为；（2）可追溯查询日志；（3）建立日志监听，设计报警机制，通过不同维度的阈值控制，进行实时异常监控；</li>
+                            <li>设计数据推送机制，对接公司"快乐平安"内部员工沟通工具推送日报周报月报，并为不同的角色实时推送不同类型的告警信息；</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>觅房</h3>
+                        <p class="job-title">产品经理</p>
+                        <p class="job-date">2014.04 - 2018.07</p>
+                        <ul>
+                            <li>产品管理：根据公司O2O运营模式，负责公司（PC、APP、WAP）三端觅房产品、觅房联盟经纪人/运营APP的研发运营。确定产品需求及定义优先级，输出原型图和需求文档，把控产品研发、产品测试、产品上线、产品验收、更新迭代的全流程；</li>
+                            <li>产品分析：通过市场竞品分析、项目落地跟进、行业竞争分析，输出产品演进方向和产品拓展建议；</li>
+                            <li>资源协调：跟进项目进度，与测试、现场等相关技术人员进行有效沟通，协调各类资源推动产品功能实现；</li>
+                            <li>产品优化：参与产品技术功能优化，并上线跟踪，针对相关产品的用户反馈，提出改进方案，促成良性迭代；</li>
+                            <li>项目管理：根据项目需求及计划，跟进项目情况，保证按照标准实现产品功能优化，定期进行项目汇报；</li>
+                            <li>工作业绩：前端产品：完成觅房（PC、APP、WAP）三端的产品、觅房联盟经纪人（APP）、觅房联盟运营（APP）的产品规划管理以及更新迭代；后端产品：完成楼盘管理系统、CRM（PC、WAP）、成交结算系统的产品规划管理以及更新迭代；</li>
+                            <li>业绩：获得当年公司产品创新奖。</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我</h2>
+            <div class="contact-info">
+                <a href="tel:+8613802287890" class="contact-link">
+                    <span class="contact-icon">📞</span>
+                    <span>13802287890</span>
+                </a>
+                <a href="mailto:819039435@qq.com" class="contact-link">
+                    <span class="contact-icon">✉️</span>
+                    <span>819039435@qq.com</span>
+                </a>
+                <div class="contact-link">
+                    <span class="contact-icon">💬</span>
+                    <span>tangjialing111</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 唐嘉玲. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const skillData = {
+            'ai-coding': {
+                icon: '🤖',
+                title: 'AI编程',
+                content: `<h4>一、AI 编程：</h4>
+                <ul>
+                    <li>熟练掌握大模型辅助编程相关技术，具备自然语言转代码的实际编写能力；</li>
+                    <li>能够独立借助AI完成代码撰写、调试与优化，提升开发效率与质量；</li>
+                </ul>`
+            },
+            'ai-tools': {
+                icon: '🛠️',
+                title: 'AI工具赋能',
+                content: `<h4>二、AI 工具赋能：</h4>
+                <ul>
+                    <li>熟悉主流AI工具生态，具备丰富的实操经验，能够高效整合工具资源；</li>
+                    <li>擅长利用AI工具梳理、重构个人工作流程，提升工作效率；</li>
+                    <li>拥有AI思维，可自主探索智能化工作新方法，推动工作模式创新；</li>
+                </ul>`
+            },
+            'solutions': {
+                icon: '💡',
+                title: '解决方案输出',
+                content: `<h4>三、售前项目沟通对接及解决方案输出：</h4>
+                <ul>
+                    <li>负责项目前期需求调研与实地勘察，精准识别客户痛点并分析技术需求；</li>
+                    <li>面向项目规划、建设、运营等全生命周期业务，与客户开展多轮沟通，针对不同客户类型和场景，输出包含架构设计、功能模块、实施计划及预算的定制化解决方案；</li>
+                    <li>组织方案演示与技术答疑，对接客户决策层、业务层及技术层，深入挖掘潜在需求，结合公司成功案例进行专业解答，协同销售团队推进项目商务洽谈；</li>
+                    <li>开展软硬件系统演示与讲解，结合客户业务痛点提供场景化应用展示，强化方案价值与落地可行性；</li>
+                    <li>围绕公司核心业务，编制标准化方案及场景方案，提升售前支持效率与专业度；</li>
+                </ul>`
+            },
+            'project-mgmt': {
+                icon: '📊',
+                title: '项目管理',
+                content: `<h4>四、项目管理：</h4>
+                <ul>
+                    <li>具备完整的项目全生命周期管理思维，熟悉项目立项、规划、执行、复盘全流程；</li>
+                    <li>拥有良好的进度、成本、风险管控能力，可独立统筹协调多方资源；</li>
+                    <li>擅长跨部门沟通与团队统筹，能够高效推进项目落地与干系人管理；</li>
+                    <li>具备较强的目标拆解与问题解决能力，可合理制定项目计划并把控整体质量。</li>
+                </ul>`
+            }
+        };
+
+        function openModal(skillKey) {
+            const data = skillData[skillKey];
+            if (data) {
+                document.getElementById('modalIcon').textContent = data.icon;
+                document.getElementById('modalTitle').textContent = data.title;
+                document.getElementById('modalBody').innerHTML = data.content;
+                document.getElementById('modalOverlay').classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+            const icon = document.querySelector('.theme-icon');
+            icon.textContent = document.body.classList.contains('dark-theme') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>

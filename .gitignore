@@ -1,0 +1,10 @@
+# 依赖
+node_modules/
+
+# 文档
+*.pdf
+*.docx
+
+# 其他
+.DS_Store
+Thumbs.db
